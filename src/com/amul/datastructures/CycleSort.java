@@ -14,8 +14,10 @@ public class CycleSort {
 
         int i = 0;
         while (i < n - 1) {
-            if (arr[i] != i + 1) swap(arr, i, arr[i] - 1);
-            else i++;
+            if (arr[i] != arr[arr[i] - 1])
+                swap(arr, i, arr[i] - 1);
+            else
+                i++;
         }
     }
 
